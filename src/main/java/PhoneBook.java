@@ -29,7 +29,7 @@ public class PhoneBook {
             }
         }
         if (findNames.isEmpty()) return new TreeSet<>();
-        return findNames;
+        else return findNames;
         // формат одного контакта "Имя - Телефон"
         // если контакт не найден - вернуть пустой TreeSet
     }
@@ -44,6 +44,12 @@ public class PhoneBook {
         else return allContacts;
         // формат одного контакта "Имя - Телефон"
         // если контактов нет в телефонной книге - вернуть пустой TreeSet
+    }
+    public Set<String> getPhones(){
+        return phonebook.keySet();
+    }
+    public  boolean getNames(String name){
+        return phonebook.containsValue(name);
     }
 
 }
